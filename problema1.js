@@ -19,8 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/procesar', (req, res) => {
-    const m = parseInt(req.query.alto);
-    const n = parseInt(req.query.ancho);
+    const {m, n} = req.body;
     res.render('tabla_pl_out', { getColor, m, n });
 });
 
