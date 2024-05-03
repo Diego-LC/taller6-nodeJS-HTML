@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
     const n = 10;
     res.render('tabla_pl', { getColor, m, n });
 });
-app.listen(3000, () => {
-    console.log('Servidor web en ejecución en el puerto 3000');
+app.listen(3055, () => {
+    console.log('Servidor web en ejecución en el puerto 3055');
 });
