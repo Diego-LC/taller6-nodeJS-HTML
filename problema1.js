@@ -17,6 +17,13 @@ app.get('/', (req, res) => {
     const n = 10;
     res.render('tabla_pl', { getColor, m, n });
 });
+
+app.post('/procesar', (req, res) => {
+    const m = parseInt(req.query.m);
+    const n = parseInt(req.query.n);
+    res.render('tabla_pl_out', { getColor, m, n });
+});
+
 app.listen(3055, () => {
     console.log('Servidor web en ejecución en el puerto 3055');
 });
