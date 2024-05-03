@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Tabla colores</h1>
+    
     <form method="post" action="/procesar">
         <label for="alto">Alto:</label>
         <input type="text" name="alto" id="alto" value="<%= m %>"><br><br>
@@ -12,8 +13,9 @@
         <label for="ancho">Ancho:</label>
         <input type="text" name="ancho" id="ancho" value="<%= n %>"><br><br>
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="generar">
     </form>
+
     <table border="1">
         <% for (let i = 0; i < m; i++) { %>
             <tr>
