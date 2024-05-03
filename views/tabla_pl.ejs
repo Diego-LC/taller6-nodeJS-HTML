@@ -15,10 +15,13 @@
         <input type="submit" value="Enviar">
     </form>
     <table border="1">
-        <% for (let i = 0; i < m; i++) { %>
+        <% for(let i=0; i<m; i++) { %>
             <tr>
-            <% for (let j = 0; j < n; j++) { %>
+            <% for(let j=0; j<n; j++) { %>
+                <% let color = getColor(i, j, m, n); %>
                 <td style="background-color: <%= color %>" onclick="alert('Color: <%= color %>')">
+                    &nbsp;
+                </td>
             <% } %>
             </tr>
         <% } %>
