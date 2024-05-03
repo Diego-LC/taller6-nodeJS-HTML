@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 
 app.post('/procesar', (req, res) => {
     const idioma = req.body.idioma;
-    console.log(m, n);
     res.render('idioma_out', { idioma});
 });
 
