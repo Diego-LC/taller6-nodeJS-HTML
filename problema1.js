@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
 });
 
 app.post('/procesar', (req, res) => {
-    const m = req.body.m;
-    const n = req.body.n;
+    const m = req.body.alto;
+    const n = req.body.ancho;
     console.log(m, n);
     res.render('tabla_pl_out', { getColor, m, n });
 });
