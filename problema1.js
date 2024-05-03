@@ -3,11 +3,10 @@ const app = express();
 const ejs = require('ejs');
 function getColor(m, n) {/*...*/}
 
-// Configurar EJS como motor de plantillas 
-app.set('view engine', 'ejs');
+// Configuración del motor de plantillas EJS
+app.set("view engine", "ejs");
+app.set("views", __dirname + "/views");
 
-// Middleware para analizar el cuerpo de las solicitudes
-app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Ruta para renderizar la página con la tabla de colores
