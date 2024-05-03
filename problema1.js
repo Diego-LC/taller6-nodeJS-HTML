@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 
 // Middleware para analizar el cuerpo de las solicitudes
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // Ruta para renderizar la página con la tabla de colores
 app.get('/', (req, res) => {
@@ -19,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.post('/procesar', (req, res) => {
     const {m, n} = req.body;
+    console.log(m, n);
     res.render('tabla_pl_out', { getColor, m, n });
 });
 
