@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
-function getColor(m, n) {/*...*/}
+
+function getColor(m, n) {
+    const colors = ["red", "blue", "green", "yellow"];
+    const colorIndex = (m+n) % colors.length;
+    return colors [colorIndex];
+}
 
 // Configuración del motor de plantillas EJS
 app.set("view engine", "ejs");
