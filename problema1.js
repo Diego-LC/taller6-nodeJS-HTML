@@ -20,7 +20,9 @@ app.get('/', (req, res) => {
 
 app.post('/procesar', (req, res) => {
     //const {m, n} = req.body;
-    console.log(req.body);
+    console.log(req);
+    const m = 6;
+    const n = 10;
     res.render('tabla_pl_out', { getColor, m, n });
 });
 
