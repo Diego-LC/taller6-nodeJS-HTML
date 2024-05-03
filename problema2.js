@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const ejs = require('ejs');
 
-function getColor(m, n) {
-    const colors = ["red", "blue", "green", "yellow"];
-    const colorIndex = (m+n) % colors.length;
-    console.log(m, n, colorIndex);
-    return colors [colorIndex];
+function getColor(fila, columna, totf, totc) {
+    const r = Math.floor((fila / totf) * 255)
+    const g = Math.floor((columna / totc) * 255)
+    const b = 128;
+    return `rgb(${r},${g},${b})`;
 }
 
 // Configuración del motor de plantillas EJS
