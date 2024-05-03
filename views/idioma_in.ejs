@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primer ejemplo</title>
+</head>
+<body>
+    <h1> Título Principal</h1>
+    <h3 style="background-color: #9090DD;">Título Secundario</h3>
+    <hr>
+    <form method="post" action="/procesar">
+    <div    id="tempestad"
+            style="background-color: #e2e290;color:blue;margin:20px;padding-left:10px;max-width:300px;">
+            <% if (idioma == 'es') { %>
+                    <input type="text" name="idioma" id="idioma" value="eng" hidden><br><br>
+                    "¡Oh, maravilla! <br> ¡Cuántas criaturas hermosas hay aquí! <br> ¡Qué hermosa es la humanidad! ¡Oh, valiente mundo nuevo <br> que tiene a tales personas en él!"
+                </div>
+                <% } else { %>
+                        <input type="text" name="idioma" id="idioma" value="esp" hidden><br><br>
+                </div>
+            "O, wonder!" <br> How many goodly creatures are there here! <br> How beauteous mankind is! O brave new world <br> That has such people in't! <br>
+        <% } %>
+        <input type="submit" value="A español">
+    </form>
+
+    <!--JS -->
+    <!---->
+</body>
+</html>
