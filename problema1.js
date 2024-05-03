@@ -1,15 +1,14 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
-
-function getColor(m, n) {
-    const colors = ["red", "blue", "green", "yellow"];
-    const colorIndex = (m+n) % colors.length;
-    return colors [colorIndex];
-}
+function getColor(m, n) {/*...*/}
 
 // Configurar EJS como motor de plantillas 
 app.set('view engine', 'ejs');
+
+// Middleware para analizar el cuerpo de las solicitudes
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Ruta para renderizar la página con la tabla de colores
 app.get('/', (req, res) => {
