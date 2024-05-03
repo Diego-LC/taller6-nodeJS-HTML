@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Tabla colores</h1>
-    
+
     <form method="post" action="/procesar">
         <label for="alto">Alto:</label>
         <input type="text" name="alto" id="alto" value="<%= m %>"><br><br>
@@ -20,7 +20,7 @@
         <% for (let i = 0; i < m; i++) { %>
             <tr>
             <% for (let j = 0; j < n; j++) { %>
-                <td style="background-color: <%= getColor(i,j) %>; ">x</td>
+                <td style="background-color: <%= getColor(i,j, m,n) %>; ">x</td>
             <% } %>
             </tr>
         <% } %>
